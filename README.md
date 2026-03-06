@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KGEC Training & Placement Cell — Website
 
-## Getting Started
+Full-stack website for the Training & Placement Cell of Kalyani Government Engineering College.
 
-First, run the development server:
+## Architecture
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+├── client/    → Next.js frontend (deploy on Vercel)
+└── server/    → Express.js backend (deploy on Railway)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Start (Local Development)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Server (Express + MongoDB)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd server
+bun install            # or npm install
+cp .env.example .env   # fill in your MongoDB URI, JWT_SECRET, etc.
+bun run dev            # starts on http://localhost:5000
+```
 
-## Learn More
+### 2. Client (Next.js)
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cd client
+bun install            # or npm install
+cp .env.example .env   # set NEXT_PUBLIC_API_URL=http://localhost:5000
+bun run dev            # starts on http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Layer    | Platform | Root Directory |
+|----------|----------|----------------|
+| Frontend | Vercel   | `client/`      |
+| Backend  | Railway  | `server/`      |
+| Database | MongoDB Atlas | — (cloud)  |
 
-## Deploy on Vercel
+### Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Server (Railway):**
+| Variable | Description |
+|----------|-------------|
+| `MONGO_URI` | MongoDB Atlas connection string |
+| `JWT_SECRET` | Secret key for JWT tokens |
+| `PORT` | Port (Railway sets this automatically) |
+| `CLIENT_URL` | Deployed frontend URL (for CORS) |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Client (Vercel):**
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_API_URL` | Deployed backend URL (Railway) |
+| `GMAIL_USER` | Gmail address for contact form |
+| `GMAIL_PASS` | Gmail app password |
+| `CONTACT_TO` | Email to receive contact submissions |
+
+### Deployment Flow
+
+```
+User → Frontend (Vercel) → Backend API (Railway) → MongoDB Atlas
+```
+
+1. Push to GitHub
+2. Deploy `client/` on Vercel → set `Root Directory` to `client`
+3. Deploy `server/` on Railway → set `Root Directory` to `server`
+4. Set env vars on both platforms
+5. Update `CLIENT_URL` on Railway to your Vercel URL
+6. Update `NEXT_PUBLIC_API_URL` on Vercel to your Railway URL

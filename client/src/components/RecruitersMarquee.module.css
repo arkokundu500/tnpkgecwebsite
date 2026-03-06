@@ -1,0 +1,98 @@
+/* ── Infinite Logo Marquee ─────────────────────────────── */
+
+/* Visible window – hides overflow, adds edge fade */
+.marqueeWrapper {
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%);
+}
+
+/* The sliding track – holds 2× the logos so the seam is invisible */
+.marqueeTrack {
+    display: flex;
+    width: max-content;
+    gap: 2rem;
+    animation: scrollLeft 35s linear infinite;
+}
+
+/* Reverse direction for row 2 */
+.marqueeTrack.reverse {
+    animation: scrollRight 35s linear infinite;
+}
+
+/* Pause on hover */
+.marqueeWrapper:hover .marqueeTrack {
+    animation-play-state: paused;
+}
+
+/* Individual logo card */
+.logoCard {
+    flex-shrink: 0;
+    width: 180px;
+    height: 96px;
+    border-radius: 0.75rem;
+    border: 1px solid #dbeafe;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.logoCard:hover {
+    box-shadow: 0 8px 24px -6px rgba(30, 58, 138, 0.15);
+    border-color: #93c5fd;
+    transform: scale(1.05);
+}
+
+.logoInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImg {
+    object-fit: contain;
+    max-height: 3.5rem;
+}
+
+.logoText {
+    color: #1e3a8a;
+    font-weight: 700;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+/* ── Keyframes ────────────────────────────────────────── */
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Pravash Ranjan",
+        "year": 2020,
+        "role": "Software Engineer",
+        "company": "Microsoft",
+        "linkedin": "https://www.linkedin.com/in/pravash-ranjan",
+        "photo": "Pravash Ranjan"
+    },
+    {
+        "name": "Kunal Soam",
+        "year": 2018,
+        "role": "Scientist, Chandrayaan 3",
+        "company": "BARC",
+        "linkedin": "https://www.linkedin.com/in/kunal-soam",
+        "photo": "Kunal Soam"
+    },
+    {
+        "name": "Pragati Shaw",
+        "year": 2019,
+        "role": "Data Analyst Product Owner",
+        "company": "Würth Group",
+        "linkedin": "https://www.linkedin.com/in/pragati-shaw",
+        "photo": "Pragati Shaw"
+    },
+    {
+        "name": "Subhasis Kundu",
+        "year": 2017,
+        "role": "Senior Scientist",
+        "company": "Amazon AGI",
+        "linkedin": "https://www.linkedin.com/in/subhasis-kundu",
+        "photo": "Subhasis Kundu"
+    },
+    {
+        "name": "Ashique Khudabukhsh",
+        "year": 2005,
+        "role": "Assistant Professor at Rochester Institute of Technology",
+        "company": "RIT, USA",
+        "linkedin": "https://www.linkedin.com/in/ashique-khudabukhsh",
+        "photo": "Ashique Khudabukhsh"
+    },
+    {
+        "name": "Sayan Ghosh",
+        "year": 2021,
+        "role": "Software Development Engineer",
+        "company": "Amazon",
+        "linkedin": "https://www.linkedin.com/in/sayan-ghosh",
+        "photo": "Sayan Ghosh"
+    },
+    {
+        "name": "Rishav Das",
+        "year": 2022,
+        "role": "Software Engineer",
+        "company": "Google",
+        "linkedin": "https://www.linkedin.com/in/rishav-das",
+        "photo": "Rishav Das"
+    },
+    {
+        "name": "Anirban Mukherjee",
+        "year": 2016,
+        "role": "Lead Engineer",
+        "company": "JP Morgan Chase",
+        "linkedin": "https://www.linkedin.com/in/anirban-mukherjee",
+        "photo": "Anirban Mukherjee"
+    },
+    {
+        "name": "Debmalya Sen",
+        "year": 2019,
+        "role": "Data Scientist",
+        "company": "Deloitte",
+        "linkedin": "https://www.linkedin.com/in/debmalya-sen",
+        "photo": "Debmalya Sen"
+    },
+    {
+        "name": "Sourav Mondal",
+        "year": 2023,
+        "role": "SDE Intern",
+        "company": "Microsoft",
+        "linkedin": "https://www.linkedin.com/in/sourav-mondal",
+        "photo": "Sourav Mondal"
+    }
+]
