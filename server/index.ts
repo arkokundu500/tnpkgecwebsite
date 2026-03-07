@@ -10,21 +10,27 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Allowed origins for CORS
-const allowedOrigins = [
-    "http://localhost:3000",
-    "http://localhost:3001",
-];
-
-// Add deployed frontend URL if set
-if (process.env.CLIENT_URL) {
-    allowedOrigins.push(process.env.CLIENT_URL);
-}
-
-// Middleware
+// CORS configuration
 app.use(
     cors({
-        origin: allowedOrigins,
+        origin: function (origin, callback) {
+            // Allow requests with no origin (mobile apps, curl, etc.)
+            if (!origin) return callback(null, true);
+
+            // Always allow localhost
+            if (origin.includes("localhost")) return callback(null, true);
+
+            // Allow Vercel deployments
+            if (origin.endsWith(".vercel.app")) return callback(null, true);
+
+            // Allow any CLIENT_URL set in env
+            if (process.env.CLIENT_URL && origin === process.env.CLIENT_URL) {
+                return callback(null, true);
+            }
+
+            // Block others
+            callback(null, false);
+        },
         credentials: true,
     })
 );

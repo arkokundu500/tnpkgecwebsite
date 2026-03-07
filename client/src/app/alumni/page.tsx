@@ -25,7 +25,9 @@ export default function AlumniPage() {
     useEffect(() => {
         async function fetchAlumni() {
             try {
-                const res = await fetch(`${API_URL}/api/alumni`);
+                const res = await fetch(`${API_URL}/api/alumni`, {
+                    cache: "no-store",
+                });
                 if (!res.ok) throw new Error("Failed to fetch");
                 const data = await res.json();
                 setAlumni(data);
