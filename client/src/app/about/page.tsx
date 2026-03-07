@@ -141,6 +141,14 @@ export default function AboutPage() {
       gradient: "from-red-500/10 to-orange-500/10",
       border: "border-red-200",
     },
+     {
+      name: "Zyro",
+      logo: "/events/zyro.png",
+      description:
+        "Zyro is the annual hardware hackathon hosted by Robotics Society of KGEC.It is a platform for students to showcase their hardware and robotics skills by building innovative projects. The event encourages creativity, problem-solving, and hands-on learning in the field of hardware development and robotics.",
+      gradient: "from-purple-500/10 to-pink-500/10",
+      border: "border-purple-200",
+    },
   ];
 
   const codingAchievements = [
