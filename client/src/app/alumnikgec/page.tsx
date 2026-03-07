@@ -12,7 +12,7 @@ interface Alumni {
     photo: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://tnpkgecwebsite.onrender.com";
 
 export default function AlumniAdminPage() {
     const [token, setToken] = useState("");

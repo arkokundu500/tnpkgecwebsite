@@ -14,7 +14,7 @@ interface Alumni {
     photo: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://tnpkgecwebsite.onrender.com";
 
 export default function AlumniPage() {
     const [alumni, setAlumni] = useState<Alumni[]>([]);
@@ -163,7 +163,7 @@ export default function AlumniPage() {
                             </div>
                             <p className="text-red-600 text-lg font-medium">{error}</p>
                             <p className="text-gray-500 text-sm mt-2">
-                                Make sure the backend server is running on port 5000.
+                                The server may be starting up. Please refresh in a moment.
                             </p>
                         </div>
                     )}
