@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "tsx watch index.ts",
+        "build": "echo done",
         "start": "tsx index.ts"
     },
     "dependencies": {

@@ -9,7 +9,8 @@
         "rootDir": ".",
         "resolveJsonModule": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "allowImportingTsExtensions": false
     },
     "include": [
         "./**/*.ts"
