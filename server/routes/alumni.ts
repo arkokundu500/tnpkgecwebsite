@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
-import Alumni from "../models/Alumni.js";
-import { verifyToken, AuthRequest } from "../middleware/auth.js";
+import Alumni from "../models/Alumni";
+import { verifyToken, AuthRequest } from "../middleware/auth";
 
 const router = Router();
 

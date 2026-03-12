@@ -1,16 +1,15 @@
 {
     "compilerOptions": {
-        "target": "ES2022",
-        "module": "ES2022",
-        "moduleResolution": "bundler",
+        "target": "ES2020",
+        "module": "commonjs",
+        "moduleResolution": "node",
         "esModuleInterop": true,
         "strict": true,
         "outDir": "./dist",
         "rootDir": ".",
         "resolveJsonModule": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "allowImportingTsExtensions": false
+        "forceConsistentCasingInFileNames": true
     },
     "include": [
         "./**/*.ts"

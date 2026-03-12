@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { connectDB } from "./db.js";
-import alumniRoutes from "./routes/alumni.js";
-import authRoutes from "./routes/auth.js";
+import { connectDB } from "./db";
+import alumniRoutes from "./routes/alumni";
+import authRoutes from "./routes/auth";
 
 dotenv.config();
 

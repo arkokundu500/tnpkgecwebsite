@@ -2,7 +2,6 @@
     "name": "tnp-server",
     "version": "1.0.0",
     "private": true,
-    "type": "module",
     "scripts": {
         "dev": "tsx watch index.ts",
         "build": "echo done",
