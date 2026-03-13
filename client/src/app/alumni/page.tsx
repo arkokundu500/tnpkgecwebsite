@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import staticAlumni from "../../data/alumni.json";
 
 interface Alumni {
     _id: string;
@@ -14,11 +15,17 @@ interface Alumni {
     photo: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://tnpkgecwebsite-ytrm.vercel.app/";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://tnpkgecwebsite.onrender.com";
+
+// Add _id to static data so the interface matches
+const fallbackData: Alumni[] = staticAlumni.map((a, i) => ({
+    ...a,
+    _id: `static-${i}`,
+}));
 
 export default function AlumniPage() {
-    const [alumni, setAlumni] = useState<Alumni[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [alumni, setAlumni] = useState<Alumni[]>(fallbackData);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [search, setSearch] = useState("");
 
@@ -30,12 +37,11 @@ export default function AlumniPage() {
                 });
                 if (!res.ok) throw new Error("Failed to fetch");
                 const data = await res.json();
-                setAlumni(data);
-            } catch (err) {
-                console.error("Error fetching alumni:", err);
-                setError("Unable to load alumni data. Please try again later.");
-            } finally {
-                setLoading(false);
+                if (data.length > 0) {
+                    setAlumni(data);
+                }
+            } catch {
+                // Silently keep static data — no error shown
             }
         }
         fetchAlumni();
