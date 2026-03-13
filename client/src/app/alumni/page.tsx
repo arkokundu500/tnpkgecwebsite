@@ -14,7 +14,7 @@ interface Alumni {
     photo: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://tnpkgecwebsite.onrender.com";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://tnpkgecwebsite-ytrm.vercel.app/";
 
 export default function AlumniPage() {
     const [alumni, setAlumni] = useState<Alumni[]>([]);
