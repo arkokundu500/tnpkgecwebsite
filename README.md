@@ -34,7 +34,7 @@ bun run dev            # starts on http://localhost:3000
 | Layer    | Platform | Root Directory |
 |----------|----------|----------------|
 | Frontend | Vercel   | `client/`      |
-| Backend  | Railway  | `server/`      |
+| Backend  | Vercel   | `server/`      |
 | Database | MongoDB Atlas | — (cloud)  |
 
 ### Environment Variables
