@@ -39,7 +39,7 @@ bun run dev            # starts on http://localhost:3000
 
 ### Environment Variables
 
-**Server (Railway):**
+**Server (Vercel):**
 | Variable | Description |
 |----------|-------------|
 | `MONGO_URI` | MongoDB Atlas connection string |
@@ -58,12 +58,12 @@ bun run dev            # starts on http://localhost:3000
 ### Deployment Flow
 
 ```
-User → Frontend (Vercel) → Backend API (Railway) → MongoDB Atlas
+User → Frontend (Vercel) → Backend API (Vercel) → MongoDB Atlas
 ```
 
 1. Push to GitHub
 2. Deploy `client/` on Vercel → set `Root Directory` to `client`
 3. Deploy `server/` on Railway → set `Root Directory` to `server`
-4. Set env vars on both platforms
-5. Update `CLIENT_URL` on Railway to your Vercel URL
-6. Update `NEXT_PUBLIC_API_URL` on Vercel to your Railway URL
+4. Set env vars on same platform but on client and server differently
+5. Update `CLIENT_URL` on Vercel to your Vercel URL
+6. Update `NEXT_PUBLIC_API_URL` on Vercel to your Vercel URL
