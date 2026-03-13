@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./RecruitersMarquee.module.css";
 
 const defaultRecruiters = [
-    "TCS", "Wipro", "Cognizant", "larsenandtoubro", "IBM","Haldia", "mndastur", "Siemens", "DCPL","Adani","prismforce","TDK","ARC"
+    "TCS", "Wipro", "Cognizant", "larsenandtoubro", "IBM","Haldia", "mndastur", "siemens", "DCPL","Adani","prismforce","TDK","ARC"
 ];
 
 function LogoCard({ name }: { name: string }) {
