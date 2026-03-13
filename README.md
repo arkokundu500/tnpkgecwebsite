@@ -2,6 +2,8 @@
 
 Full-stack website for the Training & Placement Cell of Kalyani Government Engineering College.
 
+Deployed link :- https://tnpkgecwebsite.vercel.app/
+
 ## Architecture
 
 ```
