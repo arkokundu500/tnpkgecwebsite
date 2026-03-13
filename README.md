@@ -6,7 +6,7 @@ Full-stack website for the Training & Placement Cell of Kalyani Government Engin
 
 ```
 ├── client/    → Next.js frontend (deploy on Vercel)
-└── server/    → Express.js backend (deploy on Railway)
+└── server/    → Express.js backend (deploy on Vercel)
 ```
 
 ## Quick Start (Local Development)
@@ -44,13 +44,13 @@ bun run dev            # starts on http://localhost:3000
 |----------|-------------|
 | `MONGO_URI` | MongoDB Atlas connection string |
 | `JWT_SECRET` | Secret key for JWT tokens |
-| `PORT` | Port (Railway sets this automatically) |
+| `PORT` | Port (vercel sets this automatically) |
 | `CLIENT_URL` | Deployed frontend URL (for CORS) |
 
 **Client (Vercel):**
 | Variable | Description |
 |----------|-------------|
-| `NEXT_PUBLIC_API_URL` | Deployed backend URL (Railway) |
+| `NEXT_PUBLIC_API_URL` | Deployed backend URL (vercel) |
 | `GMAIL_USER` | Gmail address for contact form |
 | `GMAIL_PASS` | Gmail app password |
 | `CONTACT_TO` | Email to receive contact submissions |
@@ -63,7 +63,7 @@ User → Frontend (Vercel) → Backend API (Vercel) → MongoDB Atlas
 
 1. Push to GitHub
 2. Deploy `client/` on Vercel → set `Root Directory` to `client`
-3. Deploy `server/` on Railway → set `Root Directory` to `server`
+3. Deploy `server/` on vercel → set `Root Directory` to `server`
 4. Set env vars on same platform but on client and server differently
 5. Update `CLIENT_URL` on Vercel to your Vercel URL
 6. Update `NEXT_PUBLIC_API_URL` on Vercel to your Vercel URL
