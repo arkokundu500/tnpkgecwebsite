@@ -4,7 +4,7 @@
         "year": 2020,
         "role": "Software Engineer",
         "company": "Microsoft",
-        "linkedin": "https://www.linkedin.com/in/pravash-ranjan",
+        "linkedin": "https://www.linkedin.com/in/pravash-ranjan-49b397154",
         "photo": "Pravash Ranjan"
     },
     {
@@ -12,7 +12,7 @@
         "year": 2018,
         "role": "Scientist, Chandrayaan 3",
         "company": "BARC",
-        "linkedin": "https://www.linkedin.com/in/kunal-soam",
+        "linkedin": "https://www.linkedin.com/in/kunal-soam-036082190/",
         "photo": "Kunal Soam"
     },
     {
@@ -78,5 +78,13 @@
         "company": "Microsoft",
         "linkedin": "https://www.linkedin.com/in/sourav-mondal",
         "photo": "Sourav Mondal"
+    },
+    {
+        "name": "Bijoy Kumar Dai",
+        "year": 2023,
+        "role": "SDE Intern",
+        "company": "Microsoft",
+        "linkedin": "https://www.linkedin.com/in/bijoy-kumar-dai",
+        "photo": "Bijoy Kumar Dai"
     }
 ]
